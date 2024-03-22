@@ -52,7 +52,7 @@ if __name__ == "__main__":
 #
 #         if j == len(match):
 #             return i - j
-#
+#     return -1
 # if __name__ == "__main__":
 #     stl = "aabbababb"
 #     match = "babb"
