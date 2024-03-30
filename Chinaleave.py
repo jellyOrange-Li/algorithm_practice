@@ -1,15 +1,14 @@
 def Chinaleave(mod_num, rem_num):
     """分别传入mod和余数列表"""
-    M = 1  # M为所有mod之积
+    M = 1
     result = 0
     for i in range(n):
-        M *= mod_num[i]
+        M *= mod_num[i]  # M为所有mod之积
     Mi = [0] * n
     Mi_ = [0] * n
     for i in range(n):
         Mi[i] = M // mod_num[i]
         Mi_[i] = pow(Mi[i], -1, mod_num[i])
-    for i in range(n):
         result += Mi[i] * Mi_[i] * rem_num[i]
     return result % M
 

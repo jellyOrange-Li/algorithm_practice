@@ -32,7 +32,7 @@ if __name__ == "__main__":
     dp = [0 for _ in range(bagweight + 1)]
 
     for i in range(len(weight)): #先列后行;先容量后物品
-        for j in range(weight[i], bagweight + 1): # 从前到后是完全背包解法，从后道前是01背包
+        for j in reversed(range(weight[i], bagweight + 1)): # 从前到后是完全背包，从后道前是01背包
             dp[j] = max(dp[j], dp[j-weight[i]] + value[i])
     print(dp)
 
